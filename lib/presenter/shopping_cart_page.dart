@@ -16,13 +16,16 @@ class ShoppingCartPage extends StatelessWidget {
         backgroundColor: Colors.yellow[700],
         title: const Text('Carrinho'),
         actions: [
-          GestureDetector(
-            child: const Icon(Icons.save),
-            onTap: () async {
-              final pdfFile = await generateTable(context);
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: GestureDetector(
+              child: const Icon(Icons.save),
+              onTap: () async {
+                final pdfFile = await generateTable(context);
 
-              await openFile(pdfFile);
-            },
+                await openFile(pdfFile);
+              },
+            ),
           )
         ],
       ),

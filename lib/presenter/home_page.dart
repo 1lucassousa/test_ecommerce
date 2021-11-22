@@ -32,16 +32,19 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           backgroundColor: Colors.yellow[700],
           actions: [
-            GestureDetector(
-              child: const Icon(Icons.shopping_cart),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const ShoppingCartPage(),
-                  ),
-                );
-              },
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: GestureDetector(
+                child: const Icon(Icons.shopping_cart),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ShoppingCartPage(),
+                    ),
+                  );
+                },
+              ),
             )
           ],
         ),
