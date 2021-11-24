@@ -63,7 +63,7 @@ class ShoppingCartPage extends StatelessWidget {
     );
   }
 
-  static Future<File> generateTable(BuildContext context) async {
+  Future<File> generateTable(BuildContext context) async {
     final pdf = pdfLib.Document();
 
     final headers = ['Produto', 'Quantidade'];
@@ -83,7 +83,7 @@ class ShoppingCartPage extends StatelessWidget {
     return saveDocument(name: 'my_example.pdf', pdf: pdf);
   }
 
-  static Future<File> saveDocument({
+  Future<File> saveDocument({
     String name,
     pdfLib.Document pdf,
   }) async {
@@ -97,7 +97,7 @@ class ShoppingCartPage extends StatelessWidget {
     return file;
   }
 
-  static Future openFile(File file) async {
+  Future openFile(File file) async {
     final url = file.path;
 
     await OpenFile.open(url);

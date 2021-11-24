@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           padding: const EdgeInsets.only(top: 10, right: 5, left: 5),
           child: ListView(
             children: <Widget>[
-              _textFormField("Product", controller: productController),
+              _textFormField("Produto", controller: productController),
               const SizedBox(
                 height: 20,
               ),
